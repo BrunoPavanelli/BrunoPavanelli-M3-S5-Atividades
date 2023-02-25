@@ -1,8 +1,16 @@
-import React from 'react'
+export interface iCardProps {
+    name: string;
+    age: string;
+    hobby: string
+}
 
-const Card = () => {
+const Card = ({name, age, hobby}: iCardProps) => {
   return (
-    <div>Card</div>
+    <li>
+        <h2>{name}</h2>
+        <p>Idade: {age}</p>
+        <p>Hobby: {hobby}</p>
+    </li>
   )
 }
 
