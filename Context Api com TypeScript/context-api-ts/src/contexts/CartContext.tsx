@@ -34,4 +34,10 @@ export const CartProvider = ({ children }: iCartContextProps) => {
 
     setCartList(filteredProduts)
   };
+
+  return (
+    <CartContext.Provider value={{ cartList, setCartList, addProduct, removeProduct }}>
+      {children}
+    </CartContext.Provider>
+  );
 };
